@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $students = ['francesco tovani', 'francesco tovani', 'francesco tovani'];
+    return view('home', compact('students'));
+})->name('/');
+
+
+Route::get('/paginadue', function () {
+    return view('test');
+})->name('test');
+
+
+Route::get('/paginatre', function () {
+    return view('paginatre');
+})->name('paginatre');
